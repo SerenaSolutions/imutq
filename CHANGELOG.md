@@ -1,3 +1,15 @@
+## [0.3.2] - 2026-11-15
+
+### Adicionado
+- `tools/assinar_intel.py`: ingere contagens do Intel IQS vindas em arquivo e emite
+  recibo v2 com `proveniencia=reconstruida`, porque nao existe job remoto no SDK.
+- Primeiro recibo Intel: BELL_Z, 200 tiros, veredito REFUSED.
+
+### Decidido
+- Quando duas regras plausiveis discordam sobre a mesma entrada (suporte estrito da 0,
+  TVD de 0,05 da 1), o veredito e REFUSED. A regra tem que ser declarada antes do dado,
+  nao escolhida depois.
+
 ## [0.3.1] - 2026-11-15
 
 ### Adicionado
