@@ -1,0 +1,36 @@
+{
+  "job_id": "qperfect:qperfect:sim:mimiq-sv-2ef5-qjob-6af9214dc8f5265fb3f23644",
+  "dispositivo": "mimiq-sv",
+  "device_qrn": "qperfect:qperfect:sim:mimiq-sv",
+  "shots": 1024,
+  "contagens_brutas": {
+    "11": 511,
+    "00": 513
+  },
+  "requisicao": {
+    "metodo": "POST",
+    "url": "https://api.qbraid.com/api/v1/jobs/",
+    "headers": {
+      "X-API-Key": "<redacted: QUANTUM_LAB_TOKEN>",
+      "Content-Type": "application/json"
+    },
+    "corpo": {
+      "shots": 1024,
+      "deviceQrn": "qperfect:qperfect:sim:mimiq-sv",
+      "program": {
+        "format": "qasm3",
+        "data": "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nqubit[2] q;\nbit[2] c;\nh q[0];\ncx q[0], q[1];\nc = measure q;\n"
+      }
+    }
+  },
+  "timestamp_utc": "2026-11-15T03:05:25Z",
+  "job_criado_em_utc": "2026-11-15T03:04:46.120Z",
+  "job_terminado_em_utc": "2026-11-15T03:04:47.798Z",
+  "status_final": "COMPLETED",
+  "custo": "0",
+  "duracao_execucao_ms": 753,
+  "fidelidade": 1,
+  "simulador": "MIMIQ-StateVector",
+  "versao_simulador": "0.30.0",
+  "circuito": "Bell (H q0; CX q0,q1; measure) - 2 qubits"
+}

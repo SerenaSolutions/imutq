@@ -1,3 +1,18 @@
+## [0.3.1] - 2026-11-15
+
+### Adicionado
+- Adaptador Intel (`src/imutq/adapters/intel.py`) emitindo QASM 2.0 para os seis circuitos canônicos, com recibo marcado como `simulada_sdk`. 48 testes verdes, 1 skip de integração.
+- Varredura qBraid: BELL_Z em 21 dispositivos ONLINE, 7 simuladores executados a custo zero, 7 recibos assinados e verificados pelo núcleo Rust.
+- `tools/assinar_qbraid.py`: transforma a varredura bruta em recibos de proveniência primária, com julgamento por 5 sigma binomial.
+- `docs/intel/` (relatório de acesso, contrato do adaptador) e `docs/qbraid/VARREDURA.md`.
+
+### Corrigido
+- `sdk_disponivel()` chamava `next()` sobre o retorno de `_importar_sdk`, que já devolve o módulo.
+
+### Refutado
+- Não existe dialeto "intelqasm". O SDK aceita QASM 2.0 e nada de QASM 3, QIR ou MLIR.
+- O SDK não tem backend de hardware: Tunney e T12 estão declarados como futuros.
+
 ## [0.3.0] - 2026-11-15
 
 ### Adicionado

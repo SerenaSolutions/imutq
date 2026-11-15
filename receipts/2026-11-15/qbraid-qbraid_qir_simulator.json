@@ -1,0 +1,67 @@
+{
+  "job_id": "qbraid:qbraid:sim:qir-sv-2ef5-qjob-6af92101c8f5265fb3f2361f",
+  "dispositivo": "qbraid_qir_simulator",
+  "device_qrn": "qbraid:qbraid:sim:qir-sv",
+  "shots": 1024,
+  "contagens_brutas": {
+    "11": 510,
+    "00": 514
+  },
+  "requisicao": {
+    "metodo": "POST",
+    "url": "https://api.qbraid.com/api/v1/jobs/",
+    "headers": {
+      "X-API-Key": "<redacted: QUANTUM_LAB_TOKEN>",
+      "Content-Type": "application/json"
+    },
+    "corpo": {
+      "shots": 1024,
+      "deviceQrn": "qbraid:qbraid:sim:qir-sv",
+      "program": {
+        "format": "qasm3",
+        "data": "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nqubit[2] q;\nbit[2] c;\nh q[0];\ncx q[0], q[1];\nc = measure q;\n"
+      }
+    }
+  },
+  "timestamp_utc": "2026-11-15T03:04:23Z",
+  "job_criado_em_utc": "2026-11-15T03:03:31.000Z",
+  "job_terminado_em_utc": "2026-11-15T03:03:31.000Z",
+  "status_final": "COMPLETED",
+  "custo": "0",
+  "duracao_execucao_ms": 40,
+  "seed": null,
+  "circuito": "Bell (H q0; CX q0,q1; measure) - 2 qubits",
+  "schema_descoberto": {
+    "obrigatorios": [
+      "shots",
+      "deviceQrn",
+      "program"
+    ],
+    "shots": "number >=0",
+    "deviceQrn": "string (formato qrn, ex. qbraid:qbraid:sim:qir-sv; NAO aceita vrn como qbraid_qir_simulator)",
+    "program": "{format: string, data: string} ou array de ate 2000 desses",
+    "format_validos": [
+      "qasm2",
+      "qasm3",
+      "qir.bc",
+      "qir.ll",
+      "analog",
+      "pulser.sequence",
+      "quil",
+      "ionq.circuit.v0",
+      "problem",
+      "gst"
+    ],
+    "opcionais": [
+      "name",
+      "tags",
+      "runtimeOptions",
+      "groupJobQrn",
+      "metadata"
+    ]
+  },
+  "status_por_endpoint": {
+    "GET /api/v1/jobs/{qrn}": "status",
+    "GET /api/v1/jobs/{qrn}/result": "resultData.measurementCounts"
+  }
+}

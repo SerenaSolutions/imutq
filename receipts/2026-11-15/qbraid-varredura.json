@@ -1,0 +1,336 @@
+{
+ "data_utc": "2026-11-15T03:05:54Z",
+ "circuito": "BELL_Z (H, CX) OpenQASM 3",
+ "shots": 1024,
+ "dispositivos": [
+  {
+   "qrn": "ibm:ibm:qpu:marrakesh",
+   "tipo": "QPU",
+   "entradas": [
+    "qiskit"
+   ],
+   "shots_max": null,
+   "status": "NAO_SUBMETIDO",
+   "motivo": "nao aceita qasm3, aceita ['qiskit']"
+  },
+  {
+   "qrn": "aws:aws:sim:dm1",
+   "tipo": "SIMULATOR",
+   "entradas": [
+    "braket",
+    "qasm3"
+   ],
+   "shots_max": 50000,
+   "status": "RECUSADO_PELA_API",
+   "http": 400,
+   "erro": "Failed to create job: Insufficient qBraid credits. Required: 1.99, Available: 0.00"
+  },
+  {
+   "qrn": "ibm:ibm:qpu:kingston",
+   "tipo": "QPU",
+   "entradas": [
+    "qiskit"
+   ],
+   "shots_max": null,
+   "status": "NAO_SUBMETIDO",
+   "motivo": "nao aceita qasm3, aceita ['qiskit']"
+  },
+  {
+   "qrn": "qbraid:qbraid:sim:qir-sv",
+   "tipo": "SIMULATOR",
+   "entradas": [
+    "qasm3",
+    "pyqir"
+   ],
+   "shots_max": 2000,
+   "job_id": "qbraid:qbraid:sim:qir-sv-2ef5-qjob-6af92193c8f5265fb3f23671",
+   "shots": 1024,
+   "custo": 0,
+   "status": "COMPLETED",
+   "resultado": {
+    "measurementCounts": {
+     "11": 526,
+     "00": 498
+    },
+    "seed": null
+   },
+   "execucao_ms": 33
+  },
+  {
+   "qrn": "ibm:ibm:qpu:miami",
+   "tipo": "QPU",
+   "entradas": [
+    "qiskit"
+   ],
+   "shots_max": null,
+   "status": "NAO_SUBMETIDO",
+   "motivo": "nao aceita qasm3, aceita ['qiskit']"
+  },
+  {
+   "qrn": "aws:quera:qpu:aquila",
+   "tipo": "QPU",
+   "entradas": [
+    "braket_ahs"
+   ],
+   "shots_max": 1000,
+   "status": "NAO_SUBMETIDO",
+   "motivo": "nao aceita qasm3, aceita ['braket_ahs']"
+  },
+  {
+   "qrn": "aws:ionq:qpu:forte-1",
+   "tipo": "QPU",
+   "entradas": [
+    "braket",
+    "qasm3"
+   ],
+   "shots_max": null,
+   "status": "RECUSADO_PELA_API",
+   "http": 400,
+   "erro": "Failed to create job: Insufficient qBraid credits. Required: 8222.00, Available: 0.00"
+  },
+  {
+   "qrn": "ionq:ionq:sim:simulator",
+   "tipo": "SIMULATOR",
+   "entradas": [
+    "qasm3"
+   ],
+   "shots_max": 1000000,
+   "job_id": "ionq:ionq:sim:simulator-2ef5-qjob-6af921a6c8f5265fb3f2368b",
+   "shots": 1024,
+   "custo": 0,
+   "status": "COMPLETED",
+   "resultado": {
+    "measurementCounts": {
+     "11": 512,
+     "00": 512
+    }
+   },
+   "execucao_ms": 262
+  },
+  {
+   "qrn": "ibm:ibm:qpu:boston",
+   "tipo": "QPU",
+   "entradas": [
+    "qiskit"
+   ],
+   "shots_max": null,
+   "status": "NAO_SUBMETIDO",
+   "motivo": "nao aceita qasm3, aceita ['qiskit']"
+  },
+  {
+   "qrn": "aws:aws:sim:sv1",
+   "tipo": "SIMULATOR",
+   "entradas": [
+    "braket",
+    "qasm3"
+   ],
+   "shots_max": 50000,
+   "status": "RECUSADO_PELA_API",
+   "http": 400,
+   "erro": "Failed to create job: Insufficient qBraid credits. Required: 0.38, Available: 0.00"
+  },
+  {
+   "qrn": "qbraid:quobly:sim:alloy-forge",
+   "tipo": "SIMULATOR",
+   "entradas": [
+    "qasm2",
+    "qasm3"
+   ],
+   "shots_max": 1000,
+   "job_id": "qbraid:quobly:sim:alloy-forge-2ef5-qjob-6af921b4c8f5265fb3f23697",
+   "shots": 1000,
+   "custo": 0,
+   "status": "COMPLETED",
+   "resultado": {
+    "measurementCounts": {
+     "10": 1,
+     "11": 506,
+     "00": 491,
+     "01": 2
+    },
+    "runtimeOptions": {
+     "shots": 1000,
+     "noise": true,
+     "seed": null,
+     "num_qubits": null
+    }
+   },
+   "execucao_ms": 12032
+  },
+  {
+   "qrn": "openquantum:aqt:qpu:ibex-q1",
+   "tipo": "QPU",
+   "entradas": [
+    "qasm2",
+    "qasm3"
+   ],
+   "shots_max": 2000,
+   "job_id": "openquantum:aqt:qpu:ibex-q1-2ef5-qjob-6af921d6c8f5265fb3f236a9",
+   "shots": 1024,
+   "custo": 0,
+   "status": "FAILED"
+  },
+  {
+   "qrn": "openquantum:ionq:qpu:forte-1",
+   "tipo": "QPU",
+   "entradas": [
+    "qasm2",
+    "qasm3"
+   ],
+   "shots_max": 5000,
+   "job_id": "openquantum:ionq:qpu:forte-1-2ef5-qjob-6af921dbc8f5265fb3f236ac",
+   "shots": 1024,
+   "custo": 0,
+   "status": "FAILED"
+  },
+  {
+   "qrn": "openquantum:ionq:qpu:forte-enterprise",
+   "tipo": "QPU",
+   "entradas": [
+    "qasm2",
+    "qasm3"
+   ],
+   "shots_max": null,
+   "job_id": "openquantum:ionq:qpu:forte-enterprise-2ef5-qjob-6af921e1c8f5265fb3f236bc",
+   "shots": 1024,
+   "custo": 0,
+   "status": "FAILED"
+  },
+  {
+   "qrn": "openquantum:iqm:qpu:emerald",
+   "tipo": "QPU",
+   "entradas": [
+    "qasm2",
+    "qasm3"
+   ],
+   "shots_max": null,
+   "job_id": "openquantum:iqm:qpu:emerald-2ef5-qjob-6af921e6c8f5265fb3f236c4",
+   "shots": 1024,
+   "custo": 0,
+   "status": "FAILED"
+  },
+  {
+   "qrn": "openquantum:iqm:qpu:garnet",
+   "tipo": "QPU",
+   "entradas": [
+    "qasm2",
+    "qasm3"
+   ],
+   "shots_max": null,
+   "job_id": "openquantum:iqm:qpu:garnet-2ef5-qjob-6af921ebc8f5265fb3f236c7",
+   "shots": 1024,
+   "custo": 0,
+   "status": "FAILED"
+  },
+  {
+   "qrn": "openquantum:rigetti:qpu:cepheus-1-108q",
+   "tipo": "QPU",
+   "entradas": [
+    "qasm2",
+    "qasm3"
+   ],
+   "shots_max": null,
+   "job_id": "openquantum:rigetti:qpu:cepheus-1-108q-2ef5-qjob-6af921ebc8f5265fb3f236ca",
+   "shots": 1024,
+   "custo": 0,
+   "status": "FAILED"
+  },
+  {
+   "qrn": "qbraid:qbraid:sim:gpu-sv",
+   "tipo": "SIMULATOR",
+   "entradas": [
+    "qasm2",
+    "qasm3"
+   ],
+   "shots_max": 1000000,
+   "job_id": "qbraid:qbraid:sim:gpu-sv-2ef5-qjob-6af921ecc8f5265fb3f236cd",
+   "shots": 1024,
+   "custo": 0,
+   "status": "COMPLETED",
+   "resultado": {
+    "measurementCounts": {
+     "11": 515,
+     "00": 509
+    },
+    "numQubits": 2,
+    "precision": "single",
+    "simulationMethod": "statevector"
+   },
+   "execucao_ms": 1104
+  },
+  {
+   "qrn": "qbraid:qbraid:sim:gpu-tn",
+   "tipo": "SIMULATOR",
+   "entradas": [
+    "qasm2",
+    "qasm3"
+   ],
+   "shots_max": 10000,
+   "job_id": "qbraid:qbraid:sim:gpu-tn-2ef5-qjob-6af921fac8f5265fb3f236d2",
+   "shots": 1024,
+   "custo": 0,
+   "status": "COMPLETED",
+   "resultado": {
+    "measurementCounts": {
+     "11": 534,
+     "00": 490
+    },
+    "numQubits": 2,
+    "simulationMethod": "matrix_product_state",
+    "precision": "double",
+    "maxBondDim": 64,
+    "absoluteCutoff": 1e-05,
+    "relativeCutoff": 1e-05
+   },
+   "execucao_ms": 1502
+  },
+  {
+   "qrn": "qperfect:qperfect:sim:mimiq-sv",
+   "tipo": "SIMULATOR",
+   "entradas": [
+    "qasm2",
+    "qasm3"
+   ],
+   "shots_max": 65536,
+   "job_id": "qperfect:qperfect:sim:mimiq-sv-2ef5-qjob-6af9220bc8f5265fb3f236e3",
+   "shots": 1024,
+   "custo": 0,
+   "status": "COMPLETED",
+   "resultado": {
+    "measurementCounts": {
+     "11": 487,
+     "00": 537
+    },
+    "fidelity": 1,
+    "avgGateError": 0,
+    "simulator": "MIMIQ-StateVector",
+    "simulatorVersion": "0.30.0"
+   },
+   "execucao_ms": 749
+  },
+  {
+   "qrn": "qperfect:qperfect:sim:mimiq-mps",
+   "tipo": "SIMULATOR",
+   "entradas": [
+    "qasm2",
+    "qasm3"
+   ],
+   "shots_max": 65536,
+   "job_id": "qperfect:qperfect:sim:mimiq-mps-2ef5-qjob-6af92219c8f5265fb3f236ed",
+   "shots": 1024,
+   "custo": 0,
+   "status": "COMPLETED",
+   "resultado": {
+    "measurementCounts": {
+     "11": 543,
+     "00": 481
+    },
+    "fidelity": 0.9999999999999998,
+    "avgGateError": 2.2204460492503128e-16,
+    "simulator": "MIMIQ-MPS",
+    "simulatorVersion": "0.29.0"
+   },
+   "execucao_ms": 709
+  }
+ ]
+}
