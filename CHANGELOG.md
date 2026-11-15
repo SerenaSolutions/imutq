@@ -1,3 +1,15 @@
+## [0.3.0] - 2026-11-15
+
+### Adicionado
+- Núcleo Rust verifica recibo v2 completo: payload canônico, SHA3-256 e ML-DSA-44
+  via `fips204`, sem depender do Python.
+- Comando `imutq verificar <arquivo...>`; aceita lista, objeto com `recibos` ou recibo único.
+- Interoperabilidade provada: recibo assinado por `dilithium-py` verificado por `fips204`.
+- ARCHITECTURE.md com a stack oficial (Rust núcleo, Python adaptador, C/C++, LLVM/MLIR, QIR, OpenQASM 3).
+
+### Corrigido
+- `Cargo.toml` apontava para `LICENSE-COMERCIAL.md`, arquivo removido no commit Apache-2.0.
+
 ## [0.2.0] - 2026-11-15
 
 ### Alterado

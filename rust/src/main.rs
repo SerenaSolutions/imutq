@@ -1,7 +1,9 @@
-// SPDX-License-Identifier: LicenseRef-Serena-Commercial-1.0
+// SPDX-License-Identifier: Apache-2.0
 // Copyright (c) 2026 Serena Solutions
 //! IMUT-Q — verificador de recibos da linguagem ZYQL.
 //! Veredito trivalente: 1 / 0 / REFUSED. Nunca arredonda.
+
+mod recibo;
 
 use serde::Deserialize;
 use sha3::{Digest, Sha3_256};
@@ -214,8 +216,9 @@ fn main() -> ExitCode {
             println!("{} recibos, {} falhas", recibos.len(), falhas);
             ExitCode::from(if falhas == 0 { 0 } else { 1 })
         }
+        Some("verificar") => recibo::cli(&args[2..].iter().map(|s| s.clone()).collect::<Vec<_>>()),
         _ => {
-            eprintln!("uso: imutq veredito <p> <n> | imutq checar <arquivo.json>");
+            eprintln!("uso: imutq veredito <p> <n> | imutq checar <arq> | imutq verificar <arq...>");
             ExitCode::from(2)
         }
     }

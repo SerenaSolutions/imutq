@@ -1,0 +1,22 @@
+{
+  "BELL_X": {
+    "job_id": "dbsher6jjaos73ak6gd0",
+    "shots": 16384
+  },
+  "DJ_balanced": {
+    "job_id": "dbsherfv5hds73diveog",
+    "shots": 16384
+  },
+  "DJ_constant": {
+    "job_id": "dbsher8k09pc73b064mg",
+    "shots": 16384
+  },
+  "GHZ_3": {
+    "job_id": "dbsher8k09pc73b064ng",
+    "shots": 16384
+  },
+  "IDENTITY": {
+    "job_id": "dbsherhabdes73fr5ndg",
+    "shots": 16384
+  }
+}
