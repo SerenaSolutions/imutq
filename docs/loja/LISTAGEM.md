@@ -65,3 +65,32 @@ Criar e verificar selos locais de integridade para trechos de texto selecionados
 1. contextMenus: oferecer a opcao de selar no botao direito.
 2. storage: guardar os selos e a cadeia no proprio navegador.
 3. activeTab: ler a URL e o titulo da aba no momento em que voce sela.
+
+---
+
+# Z-Gate — texto de listagem
+
+## Nome
+Z-Gate — gate de envio com recibo
+
+## Descricao curta
+Avalia o e-mail antes do envio e devolve 1, 0 ou RECUSADO, com recibo selado. Recusa aprovar sem evidencia.
+
+## Descricao completa
+Antes de o Gmail enviar, o Z-Gate le a mensagem e aplica uma politica declarada: dados
+pessoais no corpo, mensagem sem destinatario ou sem corpo recebem 0. Anexo, imagem
+embutida ou assunto vazio recebem RECUSADO, porque o gate nao consegue verificar esse
+conteudo e prefere nao aprovar a aprovar no escuro.
+
+Cada decisao vira um recibo com hash SHA3-256, encadeado no anterior, guardado no seu
+navegador. Voce pode exportar a cadeia em JSON. O envio contra o gate e permitido, mas
+fica registrado como FORCADO.
+
+Nada sai do navegador. Sem conta, sem servidor, sem rastreamento.
+
+## Finalidade unica
+Aplicar uma politica local de pre-envio em mensagens do Gmail e registrar a decisao com recibo.
+
+## Permissoes
+1. storage: guardar os recibos.
+2. mail.google.com: interceptar o botao de envio, unico site em que a extensao atua.

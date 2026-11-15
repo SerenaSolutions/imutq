@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Z-Gate — gate de envio com recibo",
+  "version": "0.1.0",
+  "description": "Antes de enviar no Gmail, avalia a mensagem e devolve 1, 0 ou RECUSADO com recibo selado. Recusa aprovar sem evidencia.",
+  "action": { "default_popup": "src/popup.html", "default_title": "Z-Gate" },
+  "permissions": ["storage"],
+  "host_permissions": ["https://mail.google.com/*"],
+  "content_scripts": [{
+    "matches": ["https://mail.google.com/*"],
+    "js": ["src/sha3.js", "src/canonical.js", "src/politica.js", "src/content.js"],
+    "run_at": "document_idle"
+  }],
+  "icons": { "128": "icons/icon128.png" },
+  "author": "Serena Solutions"
+}
