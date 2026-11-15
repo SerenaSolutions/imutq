@@ -1,11 +1,17 @@
 {
   "manifest_version": 3,
   "name": "IMUT-Q Receipt Checker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Verifica recibos IMUT-Q de execucao quantica: integridade SHA3-256 e leitura do veredito 1 / 0 / REFUSED.",
-  "action": { "default_popup": "src/popup.html", "default_title": "IMUT-Q" },
-  "permissions": ["storage"],
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "IMUT-Q"
+  },
+  "permissions": [
+    "storage"
+  ],
   "host_permissions": [],
-  "icons": { "128": "icons/icon128.png" },
-  "author": "Serena Solutions"
+  "icons": {
+    "128": "icons/icon128.png"
+  }
 }
