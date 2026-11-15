@@ -1,24 +1,34 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
+<!doctype html><html><head><meta charset="utf-8">
 <style>
 body{font:13px/1.45 system-ui,sans-serif;width:340px;margin:0;padding:14px;background:#0e1116;color:#e6edf3}
 h1{font-size:14px;margin:0 0 2px;letter-spacing:.3px}
 .sub{color:#8b949e;font-size:11px;margin-bottom:10px}
-textarea{width:100%;height:110px;background:#161b22;color:#e6edf3;border:1px solid #30363d;border-radius:6px;padding:8px;font:11px/1.4 ui-monospace,monospace;resize:vertical}
+textarea{width:100%;height:110px;background:#161b22;color:#e6edf3;border:1px solid #30363d;border-radius:6px;padding:8px;font:11px/1.4 ui-monospace,monospace;resize:vertical;box-sizing:border-box}
 button{margin-top:8px;width:100%;padding:9px;background:#1f6feb;color:#fff;border:0;border-radius:6px;font-weight:600;cursor:pointer}
 button:disabled{opacity:.5;cursor:default}
 #out{margin-top:12px;display:none;border-top:1px solid #30363d;padding-top:10px}
 .row{display:flex;justify-content:space-between;gap:8px;padding:2px 0}
 .k{color:#8b949e}
 .selo{font-weight:700;padding:3px 8px;border-radius:5px;display:inline-block;margin-bottom:8px}
-.ok{background:#1a7f37} .bad{background:#b62324} .ref{background:#9e6a03}
+.ok{background:#1a7f37}.bad{background:#b62324}.ref{background:#9e6a03}
+.resumo{font-size:11.5px;color:#c9d1d9;background:#161b22;border:1px solid #30363d;border-radius:5px;padding:5px 8px;margin-bottom:10px}
 .mono{font-family:ui-monospace,monospace;font-size:10px;word-break:break-all;color:#8b949e}
+#legenda{font-size:10.5px;color:#6e7681;margin-top:10px;line-height:1.4}
+footer{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:10px;padding-top:8px;border-top:1px solid #21262d;font-size:10.5px;color:#6e7681}
+footer a{color:#58a6ff;text-decoration:none}
 </style></head><body>
-<h1>IMUT-Q</h1><div class="sub">Verificador de recibo — Serena Solutions</div>
+<h1 id="titulo">IMUT-Q</h1><div class="sub" id="sub">Verificador de recibo — Serena Solutions</div>
 <textarea id="in" placeholder="Cole um recibo JSON ou arraste o arquivo aqui"></textarea>
 <button id="go">Verificar</button>
 <div id="out"></div>
+<div id="legenda"></div>
+<footer>
+  <span id="ultima"></span>
+  <span><a id="link-privacidade" href="https://serenasolutions.github.io/imutq-site/privacidade.html" target="_blank" rel="noopener">Privacidade</a> · <span id="versao"></span></span>
+</footer>
 <script src="sha3.js"></script>
 <script src="canonical.js"></script>
+<script src="i18n.js"></script>
 <script src="verificar.js"></script>
 <script src="verificar_wasm.js"></script>
 <script src="popup.js"></script>
