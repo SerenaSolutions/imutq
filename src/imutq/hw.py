@@ -8,7 +8,7 @@ from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2
 from .receipt import ReciboV2, canonical, sha3_hex
 
 BANDA = 0.15
-VERSAO_MULTIQ = "0.1.0"
+VERSAO_IMUTQ = "0.1.0"
 VERSAO_ZYQL = "2.5.9"
 VERSAO_ADAPTADOR = "qiskit-ibm-runtime"
 
@@ -61,7 +61,7 @@ def executar(backend_nome: str, shots: int, sk=None, pk=None, destino="receipts"
             backend=backend.name, dispositivo=dispositivo, hash_circuito=sha3_hex(qasm),
             shots_pedido=shots, shots_efetivo=total, contagens=contagens,
             hash_resultado_bruto=sha3_hex(canonical({k: int(v) for k, v in sorted(contagens.items())})),
-            versao_multiq=VERSAO_MULTIQ, versao_zyql=VERSAO_ZYQL, versao_adaptador=VERSAO_ADAPTADOR,
+            versao_imutq=VERSAO_IMUTQ, versao_zyql=VERSAO_ZYQL, versao_adaptador=VERSAO_ADAPTADOR,
             proveniencia="primaria",
         ).selar(sk, pk)
         recibos.append(r)

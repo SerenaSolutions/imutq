@@ -31,9 +31,10 @@ class ReciboV2:
     shots_efetivo: int
     contagens: dict
     hash_resultado_bruto: str
-    versao_multiq: str
+    versao_imutq: str
     versao_zyql: str
     versao_adaptador: str
+    esquema: str = "2.0"
     proveniencia: str = "primaria"     # "primaria" | "reconstruida"
     nota_proveniencia: str | None = None
     emitido_em: str = field(default_factory=lambda: datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
@@ -53,9 +54,14 @@ class ReciboV2:
         return self
 
     def payload(self) -> dict:
+        """Payload canonico. O recibo de 15/11/2026 gravou o campo como
+        `versao_multiq`; o esquema v2.0 congela esse nome para nao invalidar
+        assinaturas ja emitidas. O rename so entra no esquema v3."""
         d = asdict(self)
-        for k in ("assinatura", "chave_publica", "hash_payload_canonico"):
+        for k in ("assinatura", "chave_publica", "hash_payload_canonico", "esquema"):
             d.pop(k, None)
+        if self.esquema == "2.0":
+            d["versao_multiq"] = d.pop("versao_imutq")
         return d
 
     def conferir(self) -> tuple[bool, str]:

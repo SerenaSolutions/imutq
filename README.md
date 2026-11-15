@@ -1,12 +1,12 @@
-# MultiQ — plataforma de interoperabilidade quântica com verificação independente
+# IMUT-Q — plataforma de interoperabilidade quântica com verificação independente
 
-Versão 0.1.0 · 15/11/2026 · Serena Solutions
+Versão 0.2.0 · 15/11/2026 · Serena Solutions
 Licença: Apache-2.0 (ver LICENSE)
 Repositório: ainda não publicado.
 
 ## O que é
 
-MultiQ executa circuitos em provedores quânticos e emite, para cada execução, um
+IMUT-Q executa circuitos em provedores quânticos e emite, para cada execução, um
 recibo IMUT-Q v2 assinado: integridade (SHA3-256), autenticidade (ML-DSA-44) e
 proveniência (job_id capturado na submissão).
 
@@ -14,7 +14,7 @@ proveniência (job_id capturado na submissão).
 
 | Camada | Papel | Estado |
 |---|---|---|
-| MultiQ | interface, compilação, interoperabilidade | EXPERIMENTAL |
+| IMUT-Q | interface, compilação, interoperabilidade | EXPERIMENTAL |
 | ZYQL / ZEPHIRUM | decisão (1 / 0 / REFUSED) | IMPLEMENTADO |
 | IMUT-Q | integridade, autenticidade, proveniência | IMPLEMENTADO (v2) |
 
@@ -22,8 +22,8 @@ proveniência (job_id capturado na submissão).
 
 ```
 export QISKIT_IBM_TOKEN=...
-PYTHONPATH=src python3 -m multiq.cli executar --backend ibm_fez --shots 1024
-PYTHONPATH=src python3 -m multiq.cli verificar --recebido receipts/2026-11-15/lote.json
+PYTHONPATH=src python3 -m imutq.cli executar --backend ibm_fez --shots 1024
+PYTHONPATH=src python3 -m imutq.cli verificar --recebido receipts/2026-11-15/lote.json
 ```
 
 ## Recibo v2

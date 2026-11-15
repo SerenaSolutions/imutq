@@ -4,7 +4,7 @@ from .hw import executar
 from .receipt import ReciboV2
 
 def main():
-    ap = argparse.ArgumentParser(prog="multiq")
+    ap = argparse.ArgumentParser(prog="imutq")
     ap.add_argument("cmd", choices=["executar", "verificar"])
     ap.add_argument("--backend", default="ibm_fez")
     ap.add_argument("--shots", type=int, default=1024)
@@ -30,6 +30,8 @@ def main():
         for c in a.recebido:
             dados = json.loads(pathlib.Path(c).read_text())
             for d in (dados if isinstance(dados, list) else [dados]):
+                if "versao_multiq" in d:          # compatibilidade com recibos v2.0
+                    d["versao_imutq"] = d.pop("versao_multiq")
                 r = ReciboV2(**{k: v for k, v in d.items() if k in ReciboV2.__dataclass_fields__})
                 ok, msg = r.conferir()
                 print(f"{'OK  ' if ok else 'FALHA'} {r.teste:12s} {msg}")
