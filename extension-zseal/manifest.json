@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Z-Seal — selo do que voce viu",
+  "version": "0.1.0",
+  "description": "Seleciona um trecho, sela com SHA3-256, hora e URL, encadeado no selo anterior. Prova de integridade sem servidor.",
+  "action": { "default_popup": "src/popup.html", "default_title": "Z-Seal" },
+  "background": { "service_worker": "src/background.js" },
+  "permissions": ["contextMenus", "storage", "activeTab"],
+  "host_permissions": [],
+  "icons": { "128": "icons/icon128.png" },
+  "author": "Serena Solutions"
+}

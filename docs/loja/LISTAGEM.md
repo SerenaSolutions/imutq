@@ -34,3 +34,34 @@ Verificar a integridade de recibos IMUT-Q gerados pela plataforma Serena Solutio
 
 ## Dados declarados no formulario de privacidade
 Nao coleta dados do usuario. Nao vende dados. Nao usa dados para fins nao relacionados.
+
+---
+
+# Z-Seal — texto de listagem
+
+## Nome
+Z-Seal — selo do que voce viu
+
+## Descricao curta
+Sela trechos de paginas com SHA3-256, hora e URL, em cadeia verificavel. Sem servidor, sem conta.
+
+## Descricao completa
+Print some. Mensagem e editada. Noticia muda de texto depois de publicada.
+
+O Z-Seal guarda a impressao digital do trecho que voce viu: seleciona o texto, clica com
+o botao direito e escolhe Selar trecho com Z-Seal. Ele calcula SHA3-256 do texto junto
+com a hora e a URL, e encadeia o selo no anterior, como um livro-razao.
+
+Abra o icone da extensao para ver a cadeia. Se um unico caractere de qualquer selo for
+alterado, a verificacao acusa cadeia quebrada e mostra o indice exato.
+
+Tudo acontece no seu navegador. Nada e enviado a servidor algum, nao ha conta e nao ha
+rastreamento.
+
+## Finalidade unica
+Criar e verificar selos locais de integridade para trechos de texto selecionados pelo usuario.
+
+## Permissoes
+1. contextMenus: oferecer a opcao de selar no botao direito.
+2. storage: guardar os selos e a cadeia no proprio navegador.
+3. activeTab: ler a URL e o titulo da aba no momento em que voce sela.
