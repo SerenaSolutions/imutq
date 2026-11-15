@@ -1,3 +1,16 @@
+## [0.7.0] - 2026-11-15
+
+### Adicionado
+- Núcleo Rust refatorado em biblioteca (`src/lib.rs`, `canonica`, `verificacao`), usada pela CLI e pelo navegador.
+- Compilação para WebAssembly (`wasm32-unknown-unknown`, 234 KB) com ABI simples: `alocar`, `liberar`, `verificar`.
+- Extensão 0.2.0: verifica a assinatura ML-DSA-44 dentro do navegador, sem servidor. CSP com `wasm-unsafe-eval`.
+- `fips204` sem `default-rng`: só verificação, sem gerador de chaves, o que remove a dependência de `getrandom` no wasm.
+- Site público com política de privacidade: https://serenasolutions.github.io/imutq-site/
+
+### Verificado
+- Wasm: recibo íntegro devolve 1, adulterado devolve 0, json inválido devolve -1, lote qBraid devolve 1 nos sete.
+- Popup testado em DOM simulado: renderiza REFUSED e "assinatura ML-DSA-44 CONFIRMADA".
+
 ## [0.3.2] - 2026-11-15
 
 ### Adicionado

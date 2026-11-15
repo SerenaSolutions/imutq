@@ -1,6 +1,6 @@
 # Edge Add-ons — campos para colar no formulario
 
-Pacote: `extension-0.1.1.zip` (Chrome e Edge usam o mesmo arquivo).
+Pacote: `extension-0.2.0.zip` (Chrome e Edge usam o mesmo arquivo).
 Conta: Partner Center, sem taxa.
 
 ## Nome
@@ -20,8 +20,8 @@ Se divergir, o recibo e invalido, e voce ve isso na hora.
 O que aparece na tela: veredito (1, 0 ou REFUSED), provedor, backend, identificador do job,
 numero de tiros, tipo de proveniencia e se ha assinatura.
 
-Limite declarado: a conferencia da assinatura pos-quantica ML-DSA-44 e feita pelo nucleo
-IMUT-Q, nao no navegador. A extensao informa quando a assinatura esta presente.
+A assinatura pos-quantica ML-DSA-44 e verificada no proprio navegador, com o nucleo em Rust
+compilado para WebAssembly e embarcado no pacote. Nada e baixado de servidor.
 
 Nada e enviado a servidor algum. Sem conta, sem rastreamento, sem anuncio.
 
@@ -38,8 +38,8 @@ Necessaria para guardar a data da ultima verificacao no proprio navegador. Nenhu
 Nao coleta dados do usuario. Nao vende dados. Nao usa dados para fins nao relacionados.
 
 ## Politica de privacidade
-Pendente: precisa de URL publica. Publicar em https://imutq.com.br/privacidade quando o dominio existir.
-Alternativa sem dominio: publicar o texto no GitHub Pages do repositorio.
+Publicada no GitHub Pages: https://serenasolutions.github.io/imutq-site/privacidade.html
+Quando o dominio existir, apontar imutq.com.br/privacidade para o mesmo conteudo.
 
 ## Material visual obrigatorio
 1. Icone 128x128 (ja no pacote).
@@ -47,6 +47,6 @@ Alternativa sem dominio: publicar o texto no GitHub Pages do repositorio.
 
 ## Ordem de submissao
 1. Partner Center, criar conta e vincular ao programa Edge.
-2. Novo pacote, enviar `extension-0.1.1.zip`.
+2. Novo pacote, enviar `extension-0.2.0.zip`.
 3. Colar os campos acima.
 4. Enviar para certificacao. Prazo tipico: de 1 a 7 dias.
