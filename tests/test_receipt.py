@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: LicenseRef-Serena-Commercial-1.0
+# SPDX-License-Identifier: Apache-2.0
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "src"))
 from dilithium_py.ml_dsa import ML_DSA_44

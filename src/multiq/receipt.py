@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: LicenseRef-Serena-Commercial-1.0
+# SPDX-License-Identifier: Apache-2.0
 # Copyright (c) 2026 Serena Solutions
 """Recibo IMUT-Q v2: integridade, autenticidade e proveniencia declaradas."""
 from __future__ import annotations

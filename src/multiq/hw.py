@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: LicenseRef-Serena-Commercial-1.0
+# SPDX-License-Identifier: Apache-2.0
 # Copyright (c) 2026 Serena Solutions
 """Adaptador IBM: submete e captura job_id na submissao, nunca depois."""
 from __future__ import annotations

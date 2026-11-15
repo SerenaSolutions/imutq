@@ -1,8 +1,8 @@
 # MultiQ — plataforma de interoperabilidade quântica com verificação independente
 
 Versão 0.1.0 · 15/11/2026 · Serena Solutions
-Licença: Serena Commercial 1.0 (software fechado, ver LICENSE)
-Repositório: privado. Não distribuir.
+Licença: Apache-2.0 (ver LICENSE)
+Repositório: ainda não publicado.
 
 ## O que é
 
@@ -33,6 +33,6 @@ primaria; vínculo posterior é marcado `reconstruida`.
 
 ## Limites conhecidos
 
-1. Assinatura ML-DSA-44 via `dilithium-py`, implementação em Python puro: correta, mas lenta. A versão comercial precisa de biblioteca nativa.
+1. Assinatura ML-DSA-44 via `dilithium-py`, implementação em Python puro: correta, mas lenta. Uso em escala pede biblioteca nativa.
 2. Cota do plano IBM Open: execução limitada; uso comercial exige verificação dos termos.
 3. Sem adaptadores para Cirq, QIR, Braket ou Intel nesta versão.

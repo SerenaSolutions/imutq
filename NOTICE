@@ -1,10 +1,12 @@
 MultiQ
 Copyright (c) 2026 Serena Solutions
 
+Licenciado sob Apache License, Version 2.0 (ver LICENSE).
+
 Componentes de terceiros:
-- qiskit, qiskit-ibm-runtime — Apache-2.0 — IBM
-- dilithium-py — licenca do projeto — implementacao de ML-DSA-44
-- zephirum (nucleo ZYQL) — Apache-2.0 — Serena Solutions
+- qiskit, qiskit-ibm-runtime - Apache-2.0 - IBM
+- dilithium-py - licenca do proprio projeto - implementacao de ML-DSA-44
+- zephirum (nucleo ZYQL) - Apache-2.0 - Serena Solutions
 
 Nomes de terceiros citados (IBM, Qiskit, Google, Cirq, Microsoft, Intel, AWS)
 sao marcas de seus titulares. Citar nao implica endosso nem parceria.

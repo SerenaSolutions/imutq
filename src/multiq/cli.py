@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: LicenseRef-Serena-Commercial-1.0
+# SPDX-License-Identifier: Apache-2.0
 import argparse, json, os, pathlib, sys
 from .hw import executar
 from .receipt import ReciboV2
