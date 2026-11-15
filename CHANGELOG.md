@@ -1,3 +1,23 @@
+## [0.2.1] - 2026-11-15
+
+### Corrigido
+- Popup le a data da ultima verificacao no `chrome.storage.local` e mostra no rodape.
+  Antes a permissao `storage` era usada so na escrita, sem leitura visivel, o que
+  deixava a justificativa de permissao sem contrapartida na interface.
+- Rotulos, dica do campo, legenda de veredito e mensagem de integridade localizados
+  em ingles e portugues, por `navigator.language`. Quem abre em ingles ve a interface
+  em ingles, sem depender de traducao de pagina.
+- Legenda dos vereditos: 1, 0 e REFUSED explicados em uma linha.
+- Resumo de lote: "N recibos — X integros" quando mais de um recibo e colado.
+- Rodape com versao visivel e link para a politica de privacidade.
+
+### Adicionado
+- Icones 16, 32 e 48 no manifest, alem do 128, para a barra de ferramentas.
+
+### Estado
+- NAO submetida a Edge Add-ons. A versao em revisao continua a 0.2.0.
+- Pacote: `extension-0.2.1.zip`.
+
 ## [0.7.0] - 2026-11-15
 
 ### Adicionado

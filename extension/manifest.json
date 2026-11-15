@@ -1,17 +1,25 @@
 {
   "manifest_version": 3,
   "name": "IMUT-Q Receipt Checker",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Verifica recibos IMUT-Q de execucao quantica: SHA3-256 e assinatura pos-quantica ML-DSA-44, tudo no navegador.",
   "action": {
     "default_popup": "src/popup.html",
-    "default_title": "IMUT-Q"
+    "default_title": "IMUT-Q",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
   },
   "permissions": [
     "storage"
   ],
   "host_permissions": [],
   "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
   "content_security_policy": {
