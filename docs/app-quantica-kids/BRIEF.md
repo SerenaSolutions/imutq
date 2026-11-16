@@ -109,3 +109,61 @@ texto ao lado do desenho, para quem quiser ver o código por trás.
    e o método ZEPHIRUM nas três peças: três respostas, recibo selado, regra declarada.
 2. Segunda entrega: sino de Bell, desafios, progresso, inglês.
 3. Terceira: modo professor, com roteiro de 45 minutos para sala de aula.
+
+## Arquitetura técnica decidida (16/11/2026)
+
+### Núcleo em Rust, interface em JS
+
+O cálculo não fica no JavaScript. O núcleo vai em Rust, compilado para
+`wasm32-unknown-unknown`, embarcado no app. O JavaScript só desenha e capta toque.
+
+Módulos do núcleo:
+
+1. `simulador`: vetor de estado com 1 a 6 qubits, portas H, X, Y, Z, S, T, CNOT, CZ,
+   Rx, Ry, Rz, e medição com amostragem semeada (mesma semente, mesmo resultado, o que
+   permite repetir a aula e conferir).
+2. `selo`: serialização canônica mais SHA3-256, com encadeamento `prev_sha3`, o mesmo
+   código do IMUT-Q. Vetores oficiais do NIST já validados.
+3. `evidencia`: limites de Wilson e de Hoeffding para decidir se um conceito está
+   dominado. É o mesmo raciocínio que a CLI do IMUT-Q já usa para julgar um sino.
+
+Justificativa: já existe toolchain funcionando nesta máquina. O `imutq.wasm` de hoje
+saiu com 234 KB, compilou em 2 segundos e verificou sete recibos assinados dentro do
+Node. Reaproveitar é mais barato e mais seguro do que reescrever em JS.
+
+### Limite declarado do simulador
+
+Vetor de estado é exato, mas cresce exponencialmente: 2^n amplitudes complexas.
+Até 6 qubits, tranquilo em celular modesto. Entre 10 e 12, ainda roda, com atraso
+visível. Acima disso, o app não promete nada e diz o motivo. Nada de fingir que
+simulou 30 qubits.
+
+### Algoritmos de ensino, e por que cada um
+
+1. *Repetição espaçada com FSRS* (sucessor do SM-2). Cada conceito tem um cartão com
+   estabilidade e dificuldade próprias. O app escolhe o que revisar hoje pelo risco de
+   esquecimento, não por ordem fixa de capítulo. Isso é o que faz 15 minutos por dia
+   valerem mais do que uma hora no domingo.
+2. *Dificuldade adaptativa por Elo.* Cada exercício tem uma nota e cada criança tem uma
+   nota. Acerto sobe a nota dela, erro desce, e o app serve exercício com ~75% de chance
+   de acerto, que é a faixa em que se aprende sem desistir.
+3. *Domínio por limite inferior de Wilson.* Conceito dominado não é "acertou 3 de 3".
+   É "o limite inferior de 95% da proporção de acertos passou de 0,80 com pelo menos
+   N respostas". Três acertos de três dão limite de 0,44 e não bastam. É estatística
+   honesta, e a criança não vê número, vê selo.
+4. *REFUSED conta como evidência, não como erro.* Quando ela marca REFUSED, o app
+   guarda o que faltava e volta ao pré-requisito. Isso é o que diferencia o método
+   ZEPHIRUM de um quiz comum.
+5. *Amostragem semeada para ensinar probabilidade.* Com 10, 100 e 1000 medições da
+   mesma moeda, ela vê a proporção convergir. O núcleo devolve as contagens reais, não
+   um número inventado para ficar bonito.
+
+### O que fica de fora, de propósito
+
+1. Não há LLM gerando lição em tempo real. O texto vem do livro e é revisado. Modelo de
+   linguagem em app infantil implica risco de alucinação e de conteúdo impróprio sem
+   revisor humano.
+2. Não há telemetria de menor. Progresso fica no aparelho; exportação é escolha do
+   responsável.
+3. Não há download de código em tempo de execução. O wasm viaja no pacote, como na
+   extensão já publicada.
