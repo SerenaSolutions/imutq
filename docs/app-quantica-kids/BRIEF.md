@@ -167,3 +167,48 @@ simulou 30 qubits.
    responsável.
 3. Não há download de código em tempo de execução. O wasm viaja no pacote, como na
    extensão já publicada.
+
+## Composer de circuitos (pedido do dono, 16/11/2026)
+
+O laboratório ganha um composer, no espírito do IBM Quantum Composer, mas desenhado
+para mão de criança.
+
+### Como funciona
+
+1. Duas ou três linhas horizontais, uma por qubit, com o tempo correndo da esquerda
+   para a direita.
+2. Paleta de blocos grandes, com desenho e cor por tipo: H, X, Y, Z, S, T, Rx, Ry, Rz,
+   CNOT, CZ e medição.
+3. Arrastar o bloco para a linha e soltar. Toque no bloco abre duas ações: girar o
+   ângulo, ou remover.
+4. Barra de estado viva embaixo: quatro barras de probabilidade para 2 qubits, oito
+   para 3, atualizando a cada bloco colocado.
+5. Botão Rodar: 10, 100 ou 1000 tiros, com semente fixa e repetível.
+6. Botão Selar: gera o recibo do circuito, com hash SHA3-256 do desenho mais o
+   resultado. O recibo pode ser exportado e conferido depois.
+
+### Modos de uso
+
+1. *Livre*: a criança monta, vê o estado mudar e mede.
+2. *Missão*: o app pede um alvo, por exemplo "faça 00 e 11 aparecerem, e 01 e 10 nunca".
+   A criança monta até acertar, e o app só aprova quando os tiros confirmam.
+3. *Espelho*: o app mostra um circuito pronto, ela prevê o resultado antes de rodar, e
+   o composer revela. Previsão errada não é punida: volta ao conceito que faltou.
+
+### Regras de honestidade do composer
+
+1. Se o circuito usa algo que o simulador não cobre, o veredito é REFUSED com o motivo,
+   nunca um resultado aproximado apresentado como certo.
+2. O composer não esconde a diferença entre estado (amplitudes) e medição (tiros). A
+   barra de estado e o histograma ficam em painéis separados, com nome em português
+   claro.
+3. Nenhum bloco "mágico". Todo bloco novo é apresentado antes em uma lição, com desenho
+   e uma frase.
+
+### Implementação
+
+1. Estado do circuito em Rust: vetor de portas por qubit e coluna, serializado em JSON
+   canônico para o recibo.
+2. Simulação no wasm, mesma função do laboratório, sem caminho alternativo em JS.
+3. Desenho dos blocos em SVG, para escalar em tela pequena sem borrar.
+4. Salvamento local do último circuito por criança, sem servidor.
