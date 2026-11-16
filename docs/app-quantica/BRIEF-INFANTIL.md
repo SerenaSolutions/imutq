@@ -212,3 +212,19 @@ para mão de criança.
 2. Simulação no wasm, mesma função do laboratório, sem caminho alternativo em JS.
 3. Desenho dos blocos em SVG, para escalar em tela pequena sem borrar.
 4. Salvamento local do último circuito por criança, sem servidor.
+
+## Fontes e trilha de vídeo (revisado em 16/11/2026)
+
+1. Livro base: "Soft Path to Artificial Intelligence, Child Edition", 74 páginas,
+   bilíngue PT/EN, um conceito por página, minidicionário ilustrado no fim.
+2. Vídeos, um por módulo e não um por lição: Single Systems, Multiple Systems,
+   Quantum Circuits, Entanglement in Action.
+3. Os doze vídeos seguintes da mesma série cobrem algoritmos até tolerância a falhas e
+   servem como próximo nível, sem virar pré-requisito.
+4. O app não hospeda vídeo nem slide: usa o player oficial em modo privacidade e aponta
+   para a página oficial. Ver `COBERTURA-IBM.md`.
+
+## Ordem de construção
+
+Segunda entrega, depois da trilha adulta. O núcleo em Rust, o selo e o método ZEPHIRUM
+são os mesmos, então o custo de abrir esta trilha depois é baixo.
