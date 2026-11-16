@@ -1,8 +1,13 @@
 # IMUT-Q — plataforma de interoperabilidade quântica com verificação independente
 
-Versão 0.2.0 · 15/11/2026 · Serena Solutions
+Versão 0.2.1 · 16/11/2026 · Serena Solutions
 Licença: Apache-2.0 (ver LICENSE)
-Repositório: ainda não publicado.
+Repositório: https://github.com/SerenaSolutions/imutq
+Site: https://serenasolutions.github.io/imutq-site
+Estado da publicação: 0.2.0 em revisão na Microsoft Edge Add-ons; 0.2.1 empacotada nesta branch, sem envio até a revisão da 0.2.0 concluir
+
+> O verificador roda no seu navegador. O código do verificador, do núcleo em Rust
+> (`rust/`) e da extensão (`extension/`) está neste repositório, sob Apache-2.0.
 
 ## O que é
 
@@ -36,3 +41,11 @@ primaria; vínculo posterior é marcado `reconstruida`.
 1. Assinatura ML-DSA-44 via `dilithium-py`, implementação em Python puro: correta, mas lenta. Uso em escala pede biblioteca nativa.
 2. Cota do plano IBM Open: execução limitada; uso comercial exige verificação dos termos.
 3. Sem adaptadores para Cirq, QIR, Braket ou Intel nesta versão.
+
+## Onde verificar
+
+1. Núcleo em Rust: `rust/src/verificacao.rs` e `rust/src/recibo.rs`, com `rust/Cargo.toml`
+2. Extensão enviada à loja: `extension-0.2.0.zip` (0.2.0, em revisão); a 0.2.1 está em `extension/`
+3. Política de privacidade: `docs/loja/PRIVACIDADE.md` e a página do site
+4. Formato do recibo: `RECIBO.md`
+5. Limites e segurança: `SECURITY.md`
