@@ -39,3 +39,33 @@ O PDF de texto tem LaTeX cru porque o gerador não renderiza fórmula. Para o ap
 irrelevante: as fórmulas das lições serão escritas em MathML ou renderizadas como imagem
 no próprio app. Para a cópia de estudo, a solução é usar os slides oficiais, que já vêm
 com as fórmulas renderizadas.
+
+## Vídeos: 4 aulas para 11 lições
+
+| Vídeo | Cobre | Módulo do app |
+|---|---|---|
+| 3-c4xJa7Flk | Single Systems | M1, lições 1 a 3 |
+| DfZZS8Spe7U | Multiple Systems | M1, lições 4 e 5 |
+| 30U2DTfIrOU | Quantum Circuits | M2, lições 1 e 2 |
+| GSsElSQgMbU | Entanglement in Action | M3, lições 1 a 4 |
+| 42OiBzfdE2o | trailer da série | abertura do app |
+| 0Av89fZenSY | visão geral | tela "o que você vai aprender" |
+
+Regra: o app não hospeda vídeo. Usa o player oficial do YouTube em modo privacidade
+(`youtube-nocookie.com/embed/<id>`), com o vídeo começando só ao toque, e mostra a
+duração antes. Se o vídeo sair do ar, a lição continua completa sem ele, porque o vídeo
+é reforço e não pré-requisito.
+
+## Playlist de 18 vídeos: os 12 restantes são o próximo curso
+
+Os outros 12 cobrem de algoritmos a tolerância a falhas. Eles entram como _leitura
+complementar_ dos módulos M4 e M5 do app, com link, sem cópia. Isso resolve de graça a
+parte mais difícil de produzir conteúdo, e libera o app para investir no que ninguém tem:
+o laboratório com recibo selado e o módulo de evidência.
+
+## Slides: link, nunca cópia
+
+Os quatro decks são de acesso livre para quem faz o curso, mas "acesso livre" não é
+licença de redistribuição. Então: o app aponta para a página oficial, não embarca o PDF,
+não converte página em imagem e não serve o arquivo por trás de login próprio. O PDF de
+211 páginas continua sendo material de estudo pessoal do dono.
