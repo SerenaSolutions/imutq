@@ -1,10 +1,10 @@
 # IMUT-Q — plataforma de interoperabilidade quântica com verificação independente
 
-Versão 0.2.0 · 15/11/2026 · Serena Solutions
+Versão 0.2.1 · 16/11/2026 · Serena Solutions
 Licença: Apache-2.0 (ver LICENSE)
 Repositório: https://github.com/SerenaSolutions/imutq
 Site: https://serenasolutions.github.io/imutq-site
-Estado da publicação: extensão IMUT-Q Receipt Checker 0.2.0 em revisão na Microsoft Edge Add-ons
+Estado da publicação: 0.2.0 em revisão na Microsoft Edge Add-ons; 0.2.1 empacotada nesta branch, sem envio até a revisão da 0.2.0 concluir
 
 > O verificador roda no seu navegador. O código do verificador, do núcleo em Rust
 > (`rust/`) e da extensão (`extension/`) está neste repositório, sob Apache-2.0.
@@ -45,7 +45,7 @@ primaria; vínculo posterior é marcado `reconstruida`.
 ## Onde verificar
 
 1. Núcleo em Rust: `rust/src/verificacao.rs` e `rust/src/recibo.rs`, com `rust/Cargo.toml`
-2. Extensão enviada à loja: `extension/`, mesma versão 0.2.0 de `extension-0.2.0.zip`
+2. Extensão enviada à loja: `extension-0.2.0.zip` (0.2.0, em revisão); a 0.2.1 está em `extension/`
 3. Política de privacidade: `docs/loja/PRIVACIDADE.md` e a página do site
 4. Formato do recibo: `RECIBO.md`
 5. Limites e segurança: `SECURITY.md`
